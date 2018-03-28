@@ -39,6 +39,11 @@ controlling processes that run under `Supervisor
     Similar to :command:`crashmailbatch` except it sends SMS alerts
     through an email gateway.  Messages are formatted to fit in SMS.
 
+:command:`oom_score_adj`
+    This plugin is meant to be used as a supervisor event listener,
+    subscribed to ``PROCESS_STATE_RUNNING`` events.  It sets the linux
+    `oom_score_adj` for a process when it enters the ``RUNNING`` state.
+
 Contents:
 
 .. toctree::
@@ -50,6 +55,7 @@ Contents:
    crashmailbatch
    fatalmailbatch
    crashsms
+   oom_score_adj
    development
 
 Indices and tables
